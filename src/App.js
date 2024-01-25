@@ -8,6 +8,9 @@ function App() {
     <div className="App">
       <ActionCard />
       <ActionCard />
+      <ActionCard />
+      <ActionCard />
+      <ActionCard />
     </div>
   );
 }
