@@ -1,5 +1,5 @@
 import './App.css';
-import { HomeCreateForm } from './ui-components'
+import { HomeCreateForm, ActionCard } from './ui-components'
 
  
  
@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <HomeCreateForm />
+      <ActionCard />
     </div>
   );
 }
