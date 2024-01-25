@@ -1,15 +1,12 @@
 import './App.css';
 import { ActionCard } from './ui-components'
-
+import { ActionCardShoeCollection } from './ui-components';
  
  
 function App() {
   return (
     <div className="App">
-      <ActionCard />
-      <ActionCard />
-      <ActionCard />
-      <ActionCard />
+      <ActionCardShoeCollection />
       <ActionCard />
     </div>
   );
