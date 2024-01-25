@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Shoes } from "../models";
 import { ButtonProps, FlexProps, ImageProps, RatingProps, TextProps } from "@aws-amplify/ui-react";
 export declare type EscapeHatchProps = {
     [elementHierarchy: string]: Record<string, unknown>;
@@ -29,6 +30,8 @@ export declare type ActionCardOverridesProps = {
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type ActionCardProps = React.PropsWithChildren<Partial<FlexProps> & {
+    shoes?: Shoes;
+} & {
     overrides?: ActionCardOverridesProps | undefined | null;
 }>;
 export default function ActionCard(props: ActionCardProps): React.ReactElement;

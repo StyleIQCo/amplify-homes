@@ -33,6 +33,8 @@ export { default as ProductCard } from "./ProductCard";
 export { default as ProductDetail } from "./ProductDetail";
 export { default as ProfileCard } from "./ProfileCard";
 export { default as ReviewCard } from "./ReviewCard";
+export { default as ShoesCreateForm } from "./ShoesCreateForm";
+export { default as ShoesUpdateForm } from "./ShoesUpdateForm";
 export { default as SideBar } from "./SideBar";
 export { default as SocialPost } from "./SocialPost";
 export { default as StandardCard } from "./StandardCard";

@@ -1,6 +1,7 @@
 {
   "api": {
     "amplifyhomes": {
+      "dependsOn": [],
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [

@@ -6,10 +6,14 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { getOverrideProps } from "./utils";
+import { getOverrideProps, useNavigateAction } from "./utils";
 import { Button, Flex, Image, Rating, Text } from "@aws-amplify/ui-react";
 export default function ActionCard(props) {
-  const { overrides, ...rest } = props;
+  const { shoes, overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({
+    type: "url",
+    url: "https://www.saksfifthavenue.com/",
+  });
   return (
     <Flex
       gap="0"
@@ -36,6 +40,7 @@ export default function ActionCard(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={shoes?.url}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
@@ -83,7 +88,7 @@ export default function ActionCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Classic Long Sleeve T-Shirt"
+            children={shoes?.designer}
             {...getOverrideProps(overrides, "Classic Long Sleeve T-Shirt")}
           ></Text>
           <Text
@@ -106,7 +111,7 @@ export default function ActionCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Information about this product"
+            children={shoes?.model}
             {...getOverrideProps(overrides, "Information about this product")}
           ></Text>
         </Flex>
@@ -136,7 +141,7 @@ export default function ActionCard(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="$99 USD"
+          children={shoes?.price}
           {...getOverrideProps(overrides, "$99 USD")}
         ></Text>
         <Button
@@ -148,6 +153,9 @@ export default function ActionCard(props) {
           isDisabled={false}
           variation="primary"
           children="Button"
+          onClick={() => {
+            buttonOnClick();
+          }}
           {...getOverrideProps(overrides, "Button")}
         ></Button>
       </Flex>
